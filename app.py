@@ -112,8 +112,10 @@ with st.sidebar:
     for example in examples:
         if st.button(example):
             st.session_state.messages.append({"role": "user", "content": example})
-            st.experimental_rerun()
+            st.rerun()
+
 
 # Footer
 st.markdown("---")
 st.markdown("*Remember: This is for educational purposes only. Always verify important information with your textbook or teacher.*")
+
